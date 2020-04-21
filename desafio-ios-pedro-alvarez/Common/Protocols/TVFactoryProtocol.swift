@@ -7,5 +7,5 @@
 //
 
 protocol TVFactoryProtocol {
-    func buildSections()
+    func buildSections() -> [TVSectionProtocol]
 }
