@@ -7,8 +7,14 @@
 //
 import UIKit
 
+protocol DefaultTVOutputDelegate: class {
+    func didSelectCell(at indexPath: IndexPath)
+    func cellWillDisplay(at indexPath: IndexPath)
+}
+
 class DefaultTVOutput: NSObject, TableViewOutput {
     
+    weak var delegate: DefaultTVOutputDelegate?
     var sections: [TVSectionProtocol]
     
     init(sections: [TVSectionProtocol]) {
@@ -37,5 +43,13 @@ class DefaultTVOutput: NSObject, TableViewOutput {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return sections[indexPath.section].cellAt(indexPath: indexPath, tableView: tableView)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.didSelectCell(at: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        delegate?.cellWillDisplay(at: indexPath)
     }
 }

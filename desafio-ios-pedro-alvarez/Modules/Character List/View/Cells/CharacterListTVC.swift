@@ -44,28 +44,30 @@ extension CharacterListTVC: ViewCodeProtocol {
     func setupConstraints() {
         characterPhotoImageView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.left.equalToSuperview().inset(10)
-            make.width.height.equalTo(frame.size.height)
+            make.left.equalToSuperview().inset(30)
+            make.width.height.equalTo(frame.size.height * 2 / 3)
         }
         nameLbl.snp.makeConstraints { make in
             make.centerY.equalTo(characterPhotoImageView.snp.centerY)
-            make.height.equalTo(frame.size.height / 2)
+            make.height.equalTo(frame.size.height)
             make.right.equalToSuperview()
-            make.left.equalTo(characterPhotoImageView.snp.right).inset(15)
+            make.left.equalTo(characterPhotoImageView.snp.right).offset(15)
         }
     }
     
     func configureViews() {
-        characterPhotoImageView.contentMode = .scaleAspectFit
-        characterPhotoImageView.isUserInteractionEnabled = false
-        characterPhotoImageView.sd_setImage(with: URL(fileURLWithPath: imageURL ?? .empty))
+        characterPhotoImageView.layoutIfNeeded()
         characterPhotoImageView.layer.cornerRadius = characterPhotoImageView.frame.size.width / 2
         characterPhotoImageView.layer.borderWidth = 1
         characterPhotoImageView.layer.borderColor = UIColor.black.cgColor
+        characterPhotoImageView.clipsToBounds = true
+        characterPhotoImageView.contentMode = .scaleAspectFill
+        characterPhotoImageView.isUserInteractionEnabled = false
+        characterPhotoImageView.sd_setImage(with: URL(string: imageURL ?? .empty))
         
         nameLbl.text = name
-        nameLbl.font = UIFont(name: "HelveticaNeue-Bold", size: 18)
-        nameLbl.textAlignment = .center
+        nameLbl.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
+        nameLbl.textAlignment = .left
         nameLbl.textColor = .black
         nameLbl.numberOfLines = 3
 
