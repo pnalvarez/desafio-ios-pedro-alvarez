@@ -8,8 +8,6 @@
 
 struct CharacterModel {
     
-    static var total: Int = 0
-    
     let id: Int
     let name: String
     let description: String

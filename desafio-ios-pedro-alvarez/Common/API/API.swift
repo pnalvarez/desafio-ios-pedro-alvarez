@@ -23,22 +23,33 @@ final class API{
     
     static let shared = API()
     
-    let baseURL = "http://gateway.marvel.com/v1/public/characters"
+    let baseURL = "http://gateway.marvel.com/v1/public"
     
     let apiTotal: Int = 1492
     
     func getCharacters(offset: Int, limit: Int, completion: @escaping (APIResult<[CharacterJSONModel]>) -> ()){
         
-        let url = baseURL+"?ts=1&apikey=5d270d6ba90b8e7de71d2a65b6cce967&hash=1eb2d8a190e62c0ecf934462a91eb071&offset=\(offset)&limit=\(limit)"
+        let url = baseURL+"/characters?ts=1&apikey=5d270d6ba90b8e7de71d2a65b6cce967&hash=1eb2d8a190e62c0ecf934462a91eb071&offset=\(offset)&limit=\(limit)"
         
         request(url: url){ character in
             
-            guard let result = character, let data = result["data"] as? [String : Any], let total = data["total"] as? Int ,let chars = Mapper<CharacterJSONModel>().mapArray(JSONObject: data["results"]) else{
+            guard let result = character, let data = result["data"] as? [String : Any], let chars = Mapper<CharacterJSONModel>().mapArray(JSONObject: data["results"]) else{
                 completion(.error(.parseError))
                 return
             }
-            CharacterModel.total = total
             completion(.sucess(chars))
+        }
+    }
+    
+    func getHQs(characterId: Int, completion: @escaping (APIResult<HQDetailsJSONModel>) -> ()) {
+        let url = baseURL + "/\(characterId)/comics?ts=1&apikey=5d270d6ba90b8e7de71d2a65b6cce967&hash=1eb2d8a190e62c0ecf934462a91eb071"
+        
+        request(url: url) { hq in
+            guard let result = hq, let data = result["data"] as? [String : Any], let results = data["results"] as? [[String : Any]], let hqJSON = Mapper<HQDetailsJSONModel>().map(JSON: results[0])  else {
+                completion(.error(.parseError))
+                return
+            }
+            completion(.sucess(hqJSON))
         }
     }
 }
