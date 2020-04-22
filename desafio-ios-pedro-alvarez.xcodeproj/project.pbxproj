@@ -50,6 +50,16 @@
 		3F0CDE57244F77FD00D46D91 /* CharacterDetailsVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE56244F77FD00D46D91 /* CharacterDetailsVCBuilder.swift */; };
 		3F0CDE60244F807F00D46D91 /* HQDetailsVW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE5F244F807F00D46D91 /* HQDetailsVW.swift */; };
 		3F0CDE62244F814100D46D91 /* HQModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE61244F814100D46D91 /* HQModel.swift */; };
+		3F0CDE64244FA29400D46D91 /* HQDetailsJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE63244FA29400D46D91 /* HQDetailsJSONModel.swift */; };
+		3F0CDE66244FAC4E00D46D91 /* HQDetailsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE65244FAC4E00D46D91 /* HQDetailsProvider.swift */; };
+		3F0CDE68244FAD2400D46D91 /* HQDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE67244FAD2400D46D91 /* HQDetailsInteractor.swift */; };
+		3F0CDE6A244FAEE000D46D91 /* HQDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE69244FAEE000D46D91 /* HQDetailsPresenter.swift */; };
+		3F0CDE6C244FB00700D46D91 /* HQDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE6B244FB00700D46D91 /* HQDetailsVC.swift */; };
+		3F0CDE6E244FB03800D46D91 /* HQDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE6D244FB03800D46D91 /* HQDetailsCoordinator.swift */; };
+		3F0CDE70244FC36F00D46D91 /* HQDetailsVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE6F244FC36F00D46D91 /* HQDetailsVCBuilder.swift */; };
+		3F0CDE72244FC39500D46D91 /* HQDetailsPresenterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE71244FC39500D46D91 /* HQDetailsPresenterBuilder.swift */; };
+		3F0CDE74244FC3B300D46D91 /* HQDetailsInteractorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE73244FC3B300D46D91 /* HQDetailsInteractorBuilder.swift */; };
+		3F0CDE77244FCDD900D46D91 /* GenericErrorVW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE76244FCDD900D46D91 /* GenericErrorVW.swift */; };
 		6C4CAC9F91836A9803AD5426 /* Pods_desafio_ios_pedro_alvarezTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EFCAFD63131FF7E466A47C /* Pods_desafio_ios_pedro_alvarezTests.framework */; };
 		DD1C7C276EED51CEB0B56725 /* Pods_desafio_ios_pedro_alvarez_desafio_ios_pedro_alvarezUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B77D8BA934668389E06F84 /* Pods_desafio_ios_pedro_alvarez_desafio_ios_pedro_alvarezUITests.framework */; };
 		EA51E391544296B944583B60 /* Pods_desafio_ios_pedro_alvarez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272656193B6417F014B1C4BB /* Pods_desafio_ios_pedro_alvarez.framework */; };
@@ -126,6 +136,16 @@
 		3F0CDE56244F77FD00D46D91 /* CharacterDetailsVCBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsVCBuilder.swift; sourceTree = "<group>"; };
 		3F0CDE5F244F807F00D46D91 /* HQDetailsVW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsVW.swift; sourceTree = "<group>"; };
 		3F0CDE61244F814100D46D91 /* HQModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQModel.swift; sourceTree = "<group>"; };
+		3F0CDE63244FA29400D46D91 /* HQDetailsJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsJSONModel.swift; sourceTree = "<group>"; };
+		3F0CDE65244FAC4E00D46D91 /* HQDetailsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsProvider.swift; sourceTree = "<group>"; };
+		3F0CDE67244FAD2400D46D91 /* HQDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsInteractor.swift; sourceTree = "<group>"; };
+		3F0CDE69244FAEE000D46D91 /* HQDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsPresenter.swift; sourceTree = "<group>"; };
+		3F0CDE6B244FB00700D46D91 /* HQDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsVC.swift; sourceTree = "<group>"; };
+		3F0CDE6D244FB03800D46D91 /* HQDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsCoordinator.swift; sourceTree = "<group>"; };
+		3F0CDE6F244FC36F00D46D91 /* HQDetailsVCBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsVCBuilder.swift; sourceTree = "<group>"; };
+		3F0CDE71244FC39500D46D91 /* HQDetailsPresenterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsPresenterBuilder.swift; sourceTree = "<group>"; };
+		3F0CDE73244FC3B300D46D91 /* HQDetailsInteractorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsInteractorBuilder.swift; sourceTree = "<group>"; };
+		3F0CDE76244FCDD900D46D91 /* GenericErrorVW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorVW.swift; sourceTree = "<group>"; };
 		5373214D42ADD98185EF06F4 /* Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests.release.xcconfig"; path = "Target Support Files/Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests/Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests.release.xcconfig"; sourceTree = "<group>"; };
 		77FD933367F37C33F8184319 /* Pods-desafio-ios-pedro-alvarezTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-pedro-alvarezTests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-ios-pedro-alvarezTests/Pods-desafio-ios-pedro-alvarezTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B10FA16257A1157179936D67 /* Pods-desafio-ios-pedro-alvarez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-pedro-alvarez.release.xcconfig"; path = "Target Support Files/Pods-desafio-ios-pedro-alvarez/Pods-desafio-ios-pedro-alvarez.release.xcconfig"; sourceTree = "<group>"; };
@@ -426,6 +446,7 @@
 		3F0CDE12244E66E500D46D91 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				3F0CDE75244FCDC200D46D91 /* Generic */,
 				3F0CDE3B244F48A200D46D91 /* Sections */,
 			);
 			path = UI;
@@ -511,6 +532,8 @@
 		3F0CDE59244F7EDE00D46D91 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				3F0CDE69244FAEE000D46D91 /* HQDetailsPresenter.swift */,
+				3F0CDE71244FC39500D46D91 /* HQDetailsPresenterBuilder.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -518,6 +541,8 @@
 		3F0CDE5A244F7EE300D46D91 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				3F0CDE67244FAD2400D46D91 /* HQDetailsInteractor.swift */,
+				3F0CDE73244FC3B300D46D91 /* HQDetailsInteractorBuilder.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -525,6 +550,8 @@
 		3F0CDE5B244F7EE700D46D91 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				3F0CDE63244FA29400D46D91 /* HQDetailsJSONModel.swift */,
+				3F0CDE65244FAC4E00D46D91 /* HQDetailsProvider.swift */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -532,6 +559,7 @@
 		3F0CDE5C244F7EED00D46D91 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				3F0CDE6D244FB03800D46D91 /* HQDetailsCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -547,8 +575,18 @@
 		3F0CDE5E244F807100D46D91 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3F0CDE6B244FB00700D46D91 /* HQDetailsVC.swift */,
+				3F0CDE6F244FC36F00D46D91 /* HQDetailsVCBuilder.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3F0CDE75244FCDC200D46D91 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				3F0CDE76244FCDD900D46D91 /* GenericErrorVW.swift */,
+			);
+			path = Generic;
 			sourceTree = "<group>";
 		};
 		B1B6E20B4B01AE3F14F82643 /* Frameworks */ = {
@@ -803,7 +841,9 @@
 				3F0CDE03244E653900D46D91 /* Typealiases.swift in Sources */,
 				3F0CDE41244F5C2300D46D91 /* UINavigationBar+Extension.swift in Sources */,
 				3F0CDE14244E66FC00D46D91 /* CharacterListTVC.swift in Sources */,
+				3F0CDE6A244FAEE000D46D91 /* HQDetailsPresenter.swift in Sources */,
 				3F0CDE3A244E847600D46D91 /* CharacterJSONModel.swift in Sources */,
+				3F0CDE70244FC36F00D46D91 /* HQDetailsVCBuilder.swift in Sources */,
 				3F0CDE53244F776A00D46D91 /* CharacterDetailsCoordinator.swift in Sources */,
 				3F0CDE60244F807F00D46D91 /* HQDetailsVW.swift in Sources */,
 				3F0CDE33244E83A200D46D91 /* CharacterListCoordinator.swift in Sources */,
@@ -818,26 +858,34 @@
 				3F0CDE2F244E833B00D46D91 /* CharacterListInteractor.swift in Sources */,
 				3F0CDE01244E64FF00D46D91 /* TVCBuilderProtocol.swift in Sources */,
 				3F0CDDFF244E646E00D46D91 /* TVSectionProtocol.swift in Sources */,
+				3F0CDE6C244FB00700D46D91 /* HQDetailsVC.swift in Sources */,
+				3F0CDE6E244FB03800D46D91 /* HQDetailsCoordinator.swift in Sources */,
+				3F0CDE72244FC39500D46D91 /* HQDetailsPresenterBuilder.swift in Sources */,
 				3F0CDE1A244E6B7E00D46D91 /* String+Extension.swift in Sources */,
 				3F0CDE35244E83E600D46D91 /* CharacterListProvider.swift in Sources */,
 				3F0CDE4D244F70F300D46D91 /* CharacterDetailsVW.swift in Sources */,
+				3F0CDE66244FAC4E00D46D91 /* HQDetailsProvider.swift in Sources */,
 				3F0CDE1E244E7AE900D46D91 /* CharacterListTVCBuilder.swift in Sources */,
 				3F0CDE51244F762800D46D91 /* CharacterDetailsPresenter.swift in Sources */,
 				3F0CDE55244F77DF00D46D91 /* CharacterDetailsPresenterBuilder.swift in Sources */,
 				3F0CDE16244E677D00D46D91 /* UITableViewCell+Extension.swift in Sources */,
 				3F0CDDC0244E62BB00D46D91 /* AppDelegate.swift in Sources */,
+				3F0CDE68244FAD2400D46D91 /* HQDetailsInteractor.swift in Sources */,
 				3F0CDDF9244E636600D46D91 /* ViewCodeProtocol.swift in Sources */,
 				3F0CDE4F244F758600D46D91 /* CharacterDetailsVC.swift in Sources */,
 				3F0CDDFB244E63D400D46D91 /* CoordinatorProtocol.swift in Sources */,
 				3F0CDE3D244F48B100D46D91 /* BaseSection.swift in Sources */,
 				3F0CDE57244F77FD00D46D91 /* CharacterDetailsVCBuilder.swift in Sources */,
 				3F0CDE62244F814100D46D91 /* HQModel.swift in Sources */,
+				3F0CDE74244FC3B300D46D91 /* HQDetailsInteractorBuilder.swift in Sources */,
 				3F0CDE31244E838000D46D91 /* CharacterListInteractorBuilder.swift in Sources */,
 				3F0CDE22244E7C8700D46D91 /* CharacterListFactory.swift in Sources */,
 				3F0CDE25244E7D0400D46D91 /* CharacterModel.swift in Sources */,
 				3F0CDDC2244E62BB00D46D91 /* SceneDelegate.swift in Sources */,
+				3F0CDE64244FA29400D46D91 /* HQDetailsJSONModel.swift in Sources */,
 				3F0CDE27244E807E00D46D91 /* CharacterListTV.swift in Sources */,
 				3F0CDE18244E67D300D46D91 /* UITableView+Extension.swift in Sources */,
+				3F0CDE77244FCDD900D46D91 /* GenericErrorVW.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

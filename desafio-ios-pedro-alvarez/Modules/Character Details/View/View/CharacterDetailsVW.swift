@@ -9,9 +9,15 @@
 import UIKit
 import SnapKit
 
+protocol CharacterDetailsVWDelegate: class {
+    func hqButtonPressed()
+}
+
 class CharacterDetailsVW: UIView {
     
     private(set) var characterModel: CharacterModel?
+    
+    weak var delegate: CharacterDetailsVWDelegate?
     
     private(set) lazy var characterImageView: UIImageView = { return UIImageView(frame: .zero) }()
     private(set) lazy var nameLbl: UILabel = { return UILabel(frame: .zero) }()
@@ -36,7 +42,7 @@ extension CharacterDetailsVW {
     
     @objc
     private func goToHQPressed() {
-        
+        delegate?.hqButtonPressed()
     }
 }
 

@@ -11,4 +11,8 @@ extension String {
     static var empty: String {
         return ""
     }
+    
+    static var dot: String {
+        return "."
+    }
 }

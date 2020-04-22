@@ -11,5 +11,5 @@ struct HQModel {
     let name: String
     let imageURL: String
     let description: String
-    let cost: Float
+    let cost: Double
 }

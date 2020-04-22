@@ -18,6 +18,7 @@ class CharacterDetailsVC: UIViewController {
     var coordinator: CharacterDetailsCoordinator?
     
     override func viewDidLoad() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: .empty, style: .plain, target: nil, action: nil)
         title = presenter?.title
     }
     
@@ -25,5 +26,14 @@ class CharacterDetailsVC: UIViewController {
         guard let model = presenter?.characterModel else { return }
         detailsView.setup(characterModel: model)
         view = detailsView
+        detailsView.delegate = self
+    }
+}
+
+extension CharacterDetailsVC: CharacterDetailsVWDelegate {
+    
+    func hqButtonPressed() {
+        guard let id = presenter?.characterModel.id else { return }
+        coordinator?.startHQDetails(id: id)
     }
 }
