@@ -1,35 +1,29 @@
 //
-//  CharacterDetailsCoordinator.swift
+//  HQDetailsCoordinator.swift
 //  desafio-ios-pedro-alvarez
 //
 //  Created by Pedro Alvarez on 21/04/20.
 //  Copyright © 2020 Pedro Alvarez. All rights reserved.
 //
+
 import UIKit
 
-class CharacterDetailsCoordinator: CoordinatorProtocol {
+class HQDetailsCoordinator: CoordinatorProtocol {
     
     var parent: CoordinatorProtocol?
-    
     var children: [CoordinatorProtocol] = []
+    
     var navigationController: UINavigationController
     
-    var characterModel: CharacterModel?
+    var id: Int?
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
     func start() {
-        guard let model = self.characterModel else { return }
-        let vc = CharacterDetailsVCBuilder.make(characterModel: model, coordinator: self)
-        
+        guard let id = self.id else { return }
+        let vc = HQDetailsVCBuilder.make(id: id)
         navigationController.pushViewController(vc, animated: true)
-    }
-    
-    func startHQDetails(id: Int) {
-        let coordinator = HQDetailsCoordinator(navigationController: navigationController)
-        coordinator.id = id
-        coordinator.start()
     }
 }

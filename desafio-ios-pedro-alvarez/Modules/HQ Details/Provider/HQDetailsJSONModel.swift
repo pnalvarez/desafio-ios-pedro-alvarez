@@ -23,8 +23,13 @@ final class HQDetailsJSONModel: Mappable {
         return images[0]["extension"] as! String
     }
     
-    private var cost: Float {
-        return costs[0]["price"] as! Float
+    var cost: Float? {
+        if costs.count > 0 {
+            if let cost = costs[0]["price"] as? Float {
+                return cost
+            }
+        }
+        return nil
     }
     
     var imageURL: String {

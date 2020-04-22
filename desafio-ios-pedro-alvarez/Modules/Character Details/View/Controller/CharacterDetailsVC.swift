@@ -25,5 +25,14 @@ class CharacterDetailsVC: UIViewController {
         guard let model = presenter?.characterModel else { return }
         detailsView.setup(characterModel: model)
         view = detailsView
+        detailsView.delegate = self
+    }
+}
+
+extension CharacterDetailsVC: CharacterDetailsVWDelegate {
+    
+    func hqButtonPressed() {
+        guard let id = presenter?.characterModel.id else { return }
+        coordinator?.startHQDetails(id: id)
     }
 }
