@@ -51,8 +51,8 @@ extension HQDetailsVW: ViewCodeProtocol {
         hqNameLbl.snp.makeConstraints { make in
             make.top.equalTo(hqImageView.snp.bottom).offset(50)
             make.centerX.equalToSuperview()
-            make.width.equalTo(frame.size.width)
-            make.height.equalTo(30)
+            make.width.equalTo(frame.size.width * 0.8)
+            make.height.equalTo(70)
         }
         hqDescriptionLbl.snp.makeConstraints { make in
             make.top.equalTo(hqNameLbl.snp.bottom).offset(10)
@@ -65,7 +65,7 @@ extension HQDetailsVW: ViewCodeProtocol {
             make.width.height.equalTo(50)
             make.left.equalToSuperview().inset(50)
         }
-        hqCostHeaderLbl.snp.makeConstraints { make in
+        hqCostLbl.snp.makeConstraints { make in
             make.left.equalTo(hqCostHeaderLbl.snp.right).offset(10)
             make.bottom.equalToSuperview().inset(30)
             make.width.height.equalTo(50)
@@ -99,5 +99,6 @@ extension HQDetailsVW: ViewCodeProtocol {
 
         guard let cost = hqDetailsModel?.cost else { return }
         hqCostLbl.text = "\(cost)"
+        hqCostLbl.textColor = .black
     }
 }

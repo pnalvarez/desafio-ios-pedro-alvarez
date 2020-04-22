@@ -30,9 +30,11 @@ class HQDetailsInteractor: HQDetailsInteractorProtocol {
     func fetchHQ(forId id: Int) {
         provider.fetchHQ(forId: id) { result in
             switch result {
-            case .sucess(let details): self.delegate?.didFetchHQDetails(self.mapJSONToModel(json: details))
+            case .sucess(let details):
+                self.delegate?.didFetchHQDetails(self.mapJSONToModel(json: details))
                 break
-            case .error(let error): self.delegate?.didGetError(error)
+            case .error(let error):
+                self.delegate?.didGetError(error)
             }
         }
     }

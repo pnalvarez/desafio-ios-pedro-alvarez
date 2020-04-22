@@ -11,7 +11,6 @@ protocol CharacterListPresenterProtocol {
     var characters: [CharacterModel] { get }
     var title: String { get }
     
-    func fetchNextCharacters()
     func cellWillDisplay(index: Int)
 }
 
@@ -36,10 +35,6 @@ class CharacterListPresenter: CharacterListPresenterProtocol {
     
     init(interactor: CharacterListInteractorProtocol = CharacterListInteractor()) {
         self.interactor = interactor
-    }
-    
-    func fetchNextCharacters() {
-        interactor.fetchCharacters()
     }
     
     func cellWillDisplay(index: Int) {

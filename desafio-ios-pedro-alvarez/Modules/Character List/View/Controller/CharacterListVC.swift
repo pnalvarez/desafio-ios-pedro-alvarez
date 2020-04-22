@@ -21,7 +21,6 @@ class CharacterListVC: UIViewController {
     override func viewDidLoad() {
         setupNavigation()
         refreshList()
-        fetchCharacters()
     }
     
     override func loadView() {
@@ -32,6 +31,7 @@ class CharacterListVC: UIViewController {
 extension CharacterListVC {
     
     private func setupNavigation() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: .empty, style: .plain, target: nil, action: nil)
         title = presenter?.title
     }
     
@@ -70,10 +70,6 @@ extension CharacterListVC {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-    }
-    
-    private func fetchCharacters() {
-        presenter?.fetchNextCharacters()
     }
 }
 

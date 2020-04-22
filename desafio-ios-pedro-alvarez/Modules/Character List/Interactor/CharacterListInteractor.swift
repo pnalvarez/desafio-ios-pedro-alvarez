@@ -9,7 +9,6 @@
 protocol CharacterListInteractorProtocol {
     var delegate: CharacterListInteractorDelegate? { get set}
     
-    func fetchCharacters()
     func fetchWithIndex(index: Int)
 }
 
@@ -32,11 +31,6 @@ class CharacterListInteractor: CharacterListInteractorProtocol {
     
     init(provider: CharacterListProviderProtocol = CharacterListProvider()) {
         self.provider = provider
-    }
-    
-    func fetchCharacters() {
-        currentOffset += defaultLimit
-        fetch(withOffset: currentOffset)
     }
     
     func fetchWithIndex(index: Int) {

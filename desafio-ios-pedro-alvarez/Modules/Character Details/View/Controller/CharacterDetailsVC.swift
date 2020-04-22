@@ -18,6 +18,7 @@ class CharacterDetailsVC: UIViewController {
     var coordinator: CharacterDetailsCoordinator?
     
     override func viewDidLoad() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: .empty, style: .plain, target: nil, action: nil)
         title = presenter?.title
     }
     

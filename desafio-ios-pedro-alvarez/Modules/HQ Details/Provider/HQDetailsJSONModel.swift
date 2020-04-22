@@ -23,9 +23,9 @@ final class HQDetailsJSONModel: Mappable {
         return images[0]["extension"] as! String
     }
     
-    var cost: Float? {
+    var cost: Double? {
         if costs.count > 0 {
-            if let cost = costs[0]["price"] as? Float {
+            if let cost = costs[0]["price"] as? Double {
                 return cost
             }
         }
@@ -43,6 +43,6 @@ final class HQDetailsJSONModel: Mappable {
         title <- map["title"]
         description <- map["description"]
         images <- map["images"]
-        costs <- map["price"]
+        costs <- map["prices"]
     }
 }
