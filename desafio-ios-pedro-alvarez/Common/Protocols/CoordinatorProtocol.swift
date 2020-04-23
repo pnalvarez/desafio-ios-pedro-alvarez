@@ -9,9 +9,7 @@ import UIKit
 
 protocol CoordinatorProtocol {
     var navigationController: UINavigationController { get set }
-    var parent: CoordinatorProtocol? { get set}
-    var children: [CoordinatorProtocol] { get set}
-    
+
     init(navigationController: UINavigationController)
     func start()
 }

@@ -11,6 +11,7 @@ import UIKit
 class CharacterListVC: UIViewController {
     
     let tableView = CharacterListTV()
+    let errorView = GenericErrorVW()
     
     private(set) var dataSource: DefaultTVOutput?
     private(set) var factory: CharacterListFactory?
@@ -20,11 +21,30 @@ class CharacterListVC: UIViewController {
     
     override func viewDidLoad() {
         setupNavigation()
+        buildViewCode()
         refreshList()
     }
+}
+
+extension CharacterListVC: ViewCodeProtocol {
     
-    override func loadView() {
-        view = tableView
+    func buildHierarchy() {
+        view.addSubview(tableView)
+        view.addSubview(errorView)
+    }
+    
+    func setupConstraints() {
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(topLayoutGuide.snp.bottom)
+            make.bottom.left.right.equalToSuperview()
+        }
+        errorView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    func configureViews() {
+        errorView.setup(errorMessage: "Erro ao carregar personagens", retry: refreshList)
     }
 }
 
@@ -63,6 +83,7 @@ extension CharacterListVC {
     }
     
     private func refreshList() {
+        errorView.isHidden = true
         setupFactory()
         setupDataSource()
         setupTableView()
@@ -80,7 +101,7 @@ extension CharacterListVC: CharacterListPresenterDelegate {
     }
     
     func displayError() {
-        
+        errorView.isHidden = false
     }
 }
 

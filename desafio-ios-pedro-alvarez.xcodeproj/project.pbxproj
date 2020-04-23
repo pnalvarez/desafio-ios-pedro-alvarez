@@ -60,6 +60,10 @@
 		3F0CDE72244FC39500D46D91 /* HQDetailsPresenterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE71244FC39500D46D91 /* HQDetailsPresenterBuilder.swift */; };
 		3F0CDE74244FC3B300D46D91 /* HQDetailsInteractorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE73244FC3B300D46D91 /* HQDetailsInteractorBuilder.swift */; };
 		3F0CDE77244FCDD900D46D91 /* GenericErrorVW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE76244FCDD900D46D91 /* GenericErrorVW.swift */; };
+		3F0CDE7C24510A5F00D46D91 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE7B24510A5F00D46D91 /* LaunchVC.swift */; };
+		3F0CDE7E24510A6900D46D91 /* LaunchVW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE7D24510A6900D46D91 /* LaunchVW.swift */; };
+		3F0CDE8024510B8200D46D91 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE7F24510B8200D46D91 /* LaunchPresenter.swift */; };
+		3F0CDE8224510E5500D46D91 /* LaunchVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE8124510E5500D46D91 /* LaunchVCBuilder.swift */; };
 		6C4CAC9F91836A9803AD5426 /* Pods_desafio_ios_pedro_alvarezTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EFCAFD63131FF7E466A47C /* Pods_desafio_ios_pedro_alvarezTests.framework */; };
 		DD1C7C276EED51CEB0B56725 /* Pods_desafio_ios_pedro_alvarez_desafio_ios_pedro_alvarezUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B77D8BA934668389E06F84 /* Pods_desafio_ios_pedro_alvarez_desafio_ios_pedro_alvarezUITests.framework */; };
 		EA51E391544296B944583B60 /* Pods_desafio_ios_pedro_alvarez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272656193B6417F014B1C4BB /* Pods_desafio_ios_pedro_alvarez.framework */; };
@@ -146,6 +150,10 @@
 		3F0CDE71244FC39500D46D91 /* HQDetailsPresenterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsPresenterBuilder.swift; sourceTree = "<group>"; };
 		3F0CDE73244FC3B300D46D91 /* HQDetailsInteractorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQDetailsInteractorBuilder.swift; sourceTree = "<group>"; };
 		3F0CDE76244FCDD900D46D91 /* GenericErrorVW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorVW.swift; sourceTree = "<group>"; };
+		3F0CDE7B24510A5F00D46D91 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
+		3F0CDE7D24510A6900D46D91 /* LaunchVW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVW.swift; sourceTree = "<group>"; };
+		3F0CDE7F24510B8200D46D91 /* LaunchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
+		3F0CDE8124510E5500D46D91 /* LaunchVCBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVCBuilder.swift; sourceTree = "<group>"; };
 		5373214D42ADD98185EF06F4 /* Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests.release.xcconfig"; path = "Target Support Files/Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests/Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests.release.xcconfig"; sourceTree = "<group>"; };
 		77FD933367F37C33F8184319 /* Pods-desafio-ios-pedro-alvarezTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-pedro-alvarezTests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-ios-pedro-alvarezTests/Pods-desafio-ios-pedro-alvarezTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B10FA16257A1157179936D67 /* Pods-desafio-ios-pedro-alvarez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-pedro-alvarez.release.xcconfig"; path = "Target Support Files/Pods-desafio-ios-pedro-alvarez/Pods-desafio-ios-pedro-alvarez.release.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +283,8 @@
 		3F0CDDF1244E631400D46D91 /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				3F0CDE7A24510A4400D46D91 /* Presenter */,
+				3F0CDE7824510A2B00D46D91 /* View */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -589,6 +599,24 @@
 			path = Generic;
 			sourceTree = "<group>";
 		};
+		3F0CDE7824510A2B00D46D91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F0CDE7B24510A5F00D46D91 /* LaunchVC.swift */,
+				3F0CDE7D24510A6900D46D91 /* LaunchVW.swift */,
+				3F0CDE8124510E5500D46D91 /* LaunchVCBuilder.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F0CDE7A24510A4400D46D91 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3F0CDE7F24510B8200D46D91 /* LaunchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		B1B6E20B4B01AE3F14F82643 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -844,6 +872,7 @@
 				3F0CDE6A244FAEE000D46D91 /* HQDetailsPresenter.swift in Sources */,
 				3F0CDE3A244E847600D46D91 /* CharacterJSONModel.swift in Sources */,
 				3F0CDE70244FC36F00D46D91 /* HQDetailsVCBuilder.swift in Sources */,
+				3F0CDE8024510B8200D46D91 /* LaunchPresenter.swift in Sources */,
 				3F0CDE53244F776A00D46D91 /* CharacterDetailsCoordinator.swift in Sources */,
 				3F0CDE60244F807F00D46D91 /* HQDetailsVW.swift in Sources */,
 				3F0CDE33244E83A200D46D91 /* CharacterListCoordinator.swift in Sources */,
@@ -863,6 +892,7 @@
 				3F0CDE72244FC39500D46D91 /* HQDetailsPresenterBuilder.swift in Sources */,
 				3F0CDE1A244E6B7E00D46D91 /* String+Extension.swift in Sources */,
 				3F0CDE35244E83E600D46D91 /* CharacterListProvider.swift in Sources */,
+				3F0CDE7E24510A6900D46D91 /* LaunchVW.swift in Sources */,
 				3F0CDE4D244F70F300D46D91 /* CharacterDetailsVW.swift in Sources */,
 				3F0CDE66244FAC4E00D46D91 /* HQDetailsProvider.swift in Sources */,
 				3F0CDE1E244E7AE900D46D91 /* CharacterListTVCBuilder.swift in Sources */,
@@ -880,6 +910,8 @@
 				3F0CDE74244FC3B300D46D91 /* HQDetailsInteractorBuilder.swift in Sources */,
 				3F0CDE31244E838000D46D91 /* CharacterListInteractorBuilder.swift in Sources */,
 				3F0CDE22244E7C8700D46D91 /* CharacterListFactory.swift in Sources */,
+				3F0CDE8224510E5500D46D91 /* LaunchVCBuilder.swift in Sources */,
+				3F0CDE7C24510A5F00D46D91 /* LaunchVC.swift in Sources */,
 				3F0CDE25244E7D0400D46D91 /* CharacterModel.swift in Sources */,
 				3F0CDDC2244E62BB00D46D91 /* SceneDelegate.swift in Sources */,
 				3F0CDE64244FA29400D46D91 /* HQDetailsJSONModel.swift in Sources */,

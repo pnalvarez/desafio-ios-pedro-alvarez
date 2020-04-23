@@ -17,7 +17,10 @@ final class HQDetailsJSONModel: Mappable {
     var costs: [[String : Any]] = []
     
     private var path: String {
-        return images[0]["path"] as! String
+        if let image = images[0]["path"] as? String {
+            return image
+        }
+        return "interrogation"
     }
     private var fileExtension: String {
         return images[0]["extension"] as! String

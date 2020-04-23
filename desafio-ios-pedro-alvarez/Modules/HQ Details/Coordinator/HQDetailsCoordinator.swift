@@ -7,11 +7,8 @@
 //
 
 import UIKit
-
+ 
 class HQDetailsCoordinator: CoordinatorProtocol {
-    
-    var parent: CoordinatorProtocol?
-    var children: [CoordinatorProtocol] = []
     
     var navigationController: UINavigationController
     

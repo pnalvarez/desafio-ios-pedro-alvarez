@@ -8,10 +8,7 @@
 import UIKit
 
 class CharacterDetailsCoordinator: CoordinatorProtocol {
-    
-    var parent: CoordinatorProtocol?
-    
-    var children: [CoordinatorProtocol] = []
+
     var navigationController: UINavigationController
     
     var characterModel: CharacterModel?

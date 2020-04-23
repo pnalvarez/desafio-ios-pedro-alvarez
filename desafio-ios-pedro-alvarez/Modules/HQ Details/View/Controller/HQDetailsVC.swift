@@ -28,6 +28,13 @@ class HQDetailsVC: UIViewController {
     }
 }
 
+extension HQDetailsVC {
+    
+    private func fetch() {
+        errorView.isHidden = true
+        presenter?.fetch()
+    }
+}
 extension HQDetailsVC: HQDetailsPresenterDelegate {
     
     func updateUI() {
@@ -70,6 +77,7 @@ extension HQDetailsVC: ViewCodeProtocol {
         activityIndicator.startAnimating()
         activityIndicator.isHidden = true
         
+        errorView.setup(errorMessage: "Erro ao encontrar HQ", retry: { self.fetch() })
         errorView.isHidden = true
     }
 }

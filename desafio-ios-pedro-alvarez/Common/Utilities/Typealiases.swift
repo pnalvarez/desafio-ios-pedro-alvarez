@@ -8,3 +8,4 @@
 import UIKit
 
 typealias TableViewOutput = UITableViewDataSource & UITableViewDelegate
+typealias SimpleCallbackType = () -> Void

@@ -11,8 +11,6 @@ import UIKit
 class CharacterListCoordinator: CoordinatorProtocol {
     
     var navigationController: UINavigationController
-    var parent: CoordinatorProtocol?
-    var children: [CoordinatorProtocol] = []
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
