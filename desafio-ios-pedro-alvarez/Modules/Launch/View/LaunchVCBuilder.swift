@@ -8,7 +8,7 @@
 
 class LaunchVCBuilder {
     
-    static func make() -> LaunchVC{
+    static func make() -> LaunchVC {
         let presenter = LaunchPresenter()
         let vc = LaunchVC()
         

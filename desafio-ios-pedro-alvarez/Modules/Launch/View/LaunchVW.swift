@@ -35,4 +35,11 @@ extension LaunchVW: ViewCodeProtocol {
             make.height.equalTo(128)
         }
     }
+    
+    func configureViews() {
+        backgroundColor = .white
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "marvel-logo")
+        imageView.isUserInteractionEnabled = false
+    }
 }

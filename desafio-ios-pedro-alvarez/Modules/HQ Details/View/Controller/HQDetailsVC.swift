@@ -71,13 +71,16 @@ extension HQDetailsVC: ViewCodeProtocol {
     }
     
     func configureViews() {
-        activityIndicator.backgroundColor = .white
-        activityIndicator.color = .black
+        activityIndicator.backgroundColor = .black
+        activityIndicator.color = .white
         activityIndicator.style = .medium
         activityIndicator.startAnimating()
         activityIndicator.isHidden = true
         
-        errorView.setup(errorMessage: "Erro ao encontrar HQ", retry: { self.fetch() })
+        errorView.setup(errorMessage: "Erro ao encontrar HQ", retry: {
+            self.activityIndicator.isHidden = false
+            self.fetch()
+        })
         errorView.isHidden = true
     }
 }

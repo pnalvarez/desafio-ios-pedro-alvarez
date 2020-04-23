@@ -16,12 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             UINavigationBar.setAppearance()
             let window = UIWindow(windowScene: windowScene)
-            let navigationController = UINavigationController()
-            window.rootViewController = navigationController
             window.makeKeyAndVisible()
             self.window = window
-            let coordinator = CharacterListCoordinator(navigationController: navigationController)
-            coordinator.start()
+            let launchVC = LaunchVCBuilder.make()
+            launchVC.window = window
+            window.rootViewController = launchVC
         }
     }
 }
