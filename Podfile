@@ -10,6 +10,7 @@ target 'desafio-ios-pedro-alvarez' do
 	pod 'SDWebImage', '~> 5.0.2'
 	pod 'ObjectMapper', '~> 3.4.2'
 	pod 'SnapKit', '~> 5.0.1'
+  pod 'RxSwift', '~> 5.1.1'
 
   target 'desafio-ios-pedro-alvarezTests' do
     inherit! :search_paths

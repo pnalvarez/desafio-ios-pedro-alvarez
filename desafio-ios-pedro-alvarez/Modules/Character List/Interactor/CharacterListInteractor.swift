@@ -14,7 +14,7 @@ protocol CharacterListInteractorProtocol {
 
 protocol CharacterListInteractorDelegate: class {
     func fetchedCharacters(_ characters: [CharacterModel])
-    func didGetError(_ errorType: APIError)
+    func didGetError(_ errorType: Error)
 }
 
 class CharacterListInteractor: CharacterListInteractorProtocol {

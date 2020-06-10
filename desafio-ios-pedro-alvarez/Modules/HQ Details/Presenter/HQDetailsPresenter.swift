@@ -52,7 +52,7 @@ extension HQDetailsPresenter: HQDetailsInteractorDelegate {
         self.hqModel = details
     }
     
-    func didGetError(_ error: APIError) {
+    func didGetError(_ error: Error) {
         delegate?.didGetError()
     }
 }

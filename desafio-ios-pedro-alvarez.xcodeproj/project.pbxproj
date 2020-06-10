@@ -64,6 +64,7 @@
 		3F0CDE7E24510A6900D46D91 /* LaunchVW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE7D24510A6900D46D91 /* LaunchVW.swift */; };
 		3F0CDE8024510B8200D46D91 /* LaunchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE7F24510B8200D46D91 /* LaunchPresenter.swift */; };
 		3F0CDE8224510E5500D46D91 /* LaunchVCBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CDE8124510E5500D46D91 /* LaunchVCBuilder.swift */; };
+		3F3C95AE249152410068AE1F /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C95AD249152410068AE1F /* APIResult.swift */; };
 		6C4CAC9F91836A9803AD5426 /* Pods_desafio_ios_pedro_alvarezTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EFCAFD63131FF7E466A47C /* Pods_desafio_ios_pedro_alvarezTests.framework */; };
 		DD1C7C276EED51CEB0B56725 /* Pods_desafio_ios_pedro_alvarez_desafio_ios_pedro_alvarezUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12B77D8BA934668389E06F84 /* Pods_desafio_ios_pedro_alvarez_desafio_ios_pedro_alvarezUITests.framework */; };
 		EA51E391544296B944583B60 /* Pods_desafio_ios_pedro_alvarez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272656193B6417F014B1C4BB /* Pods_desafio_ios_pedro_alvarez.framework */; };
@@ -154,6 +155,7 @@
 		3F0CDE7D24510A6900D46D91 /* LaunchVW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVW.swift; sourceTree = "<group>"; };
 		3F0CDE7F24510B8200D46D91 /* LaunchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenter.swift; sourceTree = "<group>"; };
 		3F0CDE8124510E5500D46D91 /* LaunchVCBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVCBuilder.swift; sourceTree = "<group>"; };
+		3F3C95AD249152410068AE1F /* APIResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
 		5373214D42ADD98185EF06F4 /* Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests.release.xcconfig"; path = "Target Support Files/Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests/Pods-desafio-ios-pedro-alvarez-desafio-ios-pedro-alvarezUITests.release.xcconfig"; sourceTree = "<group>"; };
 		77FD933367F37C33F8184319 /* Pods-desafio-ios-pedro-alvarezTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-pedro-alvarezTests.debug.xcconfig"; path = "Target Support Files/Pods-desafio-ios-pedro-alvarezTests/Pods-desafio-ios-pedro-alvarezTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B10FA16257A1157179936D67 /* Pods-desafio-ios-pedro-alvarez.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafio-ios-pedro-alvarez.release.xcconfig"; path = "Target Support Files/Pods-desafio-ios-pedro-alvarez/Pods-desafio-ios-pedro-alvarez.release.xcconfig"; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				3F0CDE37244E842A00D46D91 /* API.swift */,
+				3F3C95AD249152410068AE1F /* APIResult.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -910,6 +913,7 @@
 				3F0CDE74244FC3B300D46D91 /* HQDetailsInteractorBuilder.swift in Sources */,
 				3F0CDE31244E838000D46D91 /* CharacterListInteractorBuilder.swift in Sources */,
 				3F0CDE22244E7C8700D46D91 /* CharacterListFactory.swift in Sources */,
+				3F3C95AE249152410068AE1F /* APIResult.swift in Sources */,
 				3F0CDE8224510E5500D46D91 /* LaunchVCBuilder.swift in Sources */,
 				3F0CDE7C24510A5F00D46D91 /* LaunchVC.swift in Sources */,
 				3F0CDE25244E7D0400D46D91 /* CharacterModel.swift in Sources */,

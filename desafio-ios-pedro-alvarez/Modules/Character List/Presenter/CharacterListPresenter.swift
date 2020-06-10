@@ -48,7 +48,7 @@ extension CharacterListPresenter: CharacterListInteractorDelegate {
         self.characters.append(contentsOf: characters)
     }
     
-    func didGetError(_ errorType: APIError) {
+    func didGetError(_ errorType: Error) {
         
     }
 }

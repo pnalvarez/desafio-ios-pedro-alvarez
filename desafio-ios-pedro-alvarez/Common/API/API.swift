@@ -8,13 +8,9 @@
 
 import Alamofire
 import ObjectMapper
+import RxSwift
 
-enum APIResult<T> {
-    case sucess(T)
-    case error(APIError)
-}
-
-enum APIError {
+enum APIError: Error {
     case parseError
     case genericError
 }
@@ -27,35 +23,38 @@ final class API{
     
     let apiTotal: Int = 1492
     
-    func getCharacters(offset: Int, limit: Int, completion: @escaping (APIResult<[CharacterJSONModel]>) -> ()){
+    lazy var charactersSubject = PublishSubject<[CharacterJSONModel]>()
+    lazy var hqsSubject = PublishSubject<HQDetailsJSONModel>()
+    
+    func getCharacters(offset: Int, limit: Int){
         
         let url = baseURL+"/characters?ts=1&apikey=5d270d6ba90b8e7de71d2a65b6cce967&hash=1eb2d8a190e62c0ecf934462a91eb071&offset=\(offset)&limit=\(limit)"
         
         request(url: url){ character in
             
             guard let result = character, let data = result["data"] as? [String : Any], let chars = Mapper<CharacterJSONModel>().mapArray(JSONObject: data["results"]) else{
-                completion(.error(.parseError))
+                self.charactersSubject.onError(APIError.parseError)
                 return
             }
-            completion(.sucess(chars))
+            self.charactersSubject.onNext(chars)
         }
     }
     
-    func getHQs(characterId: Int, completion: @escaping (APIResult<HQDetailsJSONModel>) -> ()) {
+    func getHQs(characterId: Int) {
         let url = baseURL + "/characters/\(characterId)/comics?ts=1&apikey=5d270d6ba90b8e7de71d2a65b6cce967&hash=1eb2d8a190e62c0ecf934462a91eb071"
         
         request(url: url) { hq in
             guard let result = hq, let data = result["data"] as? [String : Any], let results = data["results"] as? [[String : Any]] else {
-                completion(.error(.parseError))
+                self.hqsSubject.onError(APIError.parseError)
                 return
             }
             if results.count > 0 {
                 if let hqJSON = Mapper<HQDetailsJSONModel>().map(JSON: results[0]) {
-                    completion(.sucess(hqJSON))
+                    self.hqsSubject.onNext(hqJSON)
                     return
                 }
             }
-            completion(.error(.genericError))
+            self.hqsSubject.onError(APIError.genericError)
         }
     }
 }

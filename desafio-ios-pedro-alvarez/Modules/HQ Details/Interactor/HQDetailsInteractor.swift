@@ -14,7 +14,7 @@ protocol HQDetailsInteractorProtocol {
 
 protocol HQDetailsInteractorDelegate: class {
     func didFetchHQDetails(_ details: HQModel)
-    func didGetError(_ error: APIError)
+    func didGetError(_ error: Error)
 }
 
 class HQDetailsInteractor: HQDetailsInteractorProtocol {
